@@ -9,8 +9,8 @@
  * ---------------------------------------------------------------
  */
 
-import { apiInstance } from "../config/api-instance";
-import type { Pet } from "../types";
+import { apiInstance } from '../config/api-instance';
+import type { Pet } from '../';
 
 export const PetApi = {
   /**
@@ -28,7 +28,7 @@ export const PetApi = {
     /** file to upload */
     file?: File;
   }) {
-    const method = "post";
+    const method = 'post';
     const endpoint = `/pet/${payload.petId}/uploadImage`;
     const options = payload;
 
@@ -44,7 +44,7 @@ export const PetApi = {
    * @secure */
 
   async addPet(payload: Pet) {
-    const method = "post";
+    const method = 'post';
     const endpoint = `/pet`;
     const options = payload;
 
@@ -60,7 +60,7 @@ export const PetApi = {
    * @secure */
 
   async updatePet(payload: Pet) {
-    const method = "put";
+    const method = 'put';
     const endpoint = `/pet`;
     const options = payload;
 
@@ -76,7 +76,7 @@ export const PetApi = {
    * @secure */
 
   async findPetsByStatus<T = Pet[]>() {
-    const method = "get";
+    const method = 'get';
     const endpoint = `/pet/findByStatus`;
     const options = undefined;
 
@@ -93,7 +93,7 @@ export const PetApi = {
    * @secure */
 
   async findPetsByTags<T = Pet[]>() {
-    const method = "get";
+    const method = 'get';
     const endpoint = `/pet/findByTags`;
     const options = undefined;
 
@@ -109,7 +109,7 @@ export const PetApi = {
    * @secure */
 
   async getPetById<T = Pet>(payload: { petId: number }) {
-    const method = "get";
+    const method = 'get';
     const endpoint = `/pet/${payload.petId}`;
     const options = undefined;
 
@@ -131,7 +131,7 @@ export const PetApi = {
     /** Updated status of the pet */
     status?: string;
   }) {
-    const method = "post";
+    const method = 'post';
     const endpoint = `/pet/${payload.petId}`;
     const options = payload;
 
@@ -147,7 +147,7 @@ export const PetApi = {
    * @secure */
 
   async deletePet(payload: { petId: number }) {
-    const method = "delete";
+    const method = 'delete';
     const endpoint = `/pet/${payload.petId}`;
     const options = undefined;
 

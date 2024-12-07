@@ -9,8 +9,8 @@
  * ---------------------------------------------------------------
  */
 
-import { apiInstance } from "../config/api-instance";
-import type { User } from "../types";
+import { apiInstance } from '../config/api-instance';
+import type { User } from '../';
 
 export const UserApi = {
   /**
@@ -21,7 +21,7 @@ export const UserApi = {
    * @request POST:/user/createWithList */
 
   async createUsersWithListInput(payload: User[]) {
-    const method = "post";
+    const method = 'post';
     const endpoint = `/user/createWithList`;
     const options = payload;
 
@@ -36,7 +36,7 @@ export const UserApi = {
    * @request GET:/user/{username} */
 
   async getUserByName<T = User>(payload: { username: string }) {
-    const method = "get";
+    const method = 'get';
     const endpoint = `/user/${payload.username}`;
     const options = undefined;
 
@@ -51,7 +51,7 @@ export const UserApi = {
    * @request PUT:/user/{username} */
 
   async updateUser(payload: { username: string; user: User }) {
-    const method = "put";
+    const method = 'put';
     const endpoint = `/user/${payload.username}`;
     const options = payload;
 
@@ -66,7 +66,7 @@ export const UserApi = {
    * @request DELETE:/user/{username} */
 
   async deleteUser(payload: { username: string }) {
-    const method = "delete";
+    const method = 'delete';
     const endpoint = `/user/${payload.username}`;
     const options = undefined;
 
@@ -81,7 +81,7 @@ export const UserApi = {
    * @request GET:/user/login */
 
   async loginUser<T = string>() {
-    const method = "get";
+    const method = 'get';
     const endpoint = `/user/login`;
     const options = undefined;
 
@@ -96,7 +96,7 @@ export const UserApi = {
    * @request GET:/user/logout */
 
   async logoutUser<T = any>() {
-    const method = "get";
+    const method = 'get';
     const endpoint = `/user/logout`;
     const options = undefined;
 
@@ -111,7 +111,7 @@ export const UserApi = {
    * @request POST:/user/createWithArray */
 
   async createUsersWithArrayInput(payload: User[]) {
-    const method = "post";
+    const method = 'post';
     const endpoint = `/user/createWithArray`;
     const options = payload;
 
@@ -126,7 +126,7 @@ export const UserApi = {
    * @request POST:/user */
 
   async createUser(payload: User) {
-    const method = "post";
+    const method = 'post';
     const endpoint = `/user`;
     const options = payload;
 

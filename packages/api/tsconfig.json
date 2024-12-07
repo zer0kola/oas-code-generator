@@ -5,8 +5,9 @@
     "paths": {
       "@repo/api/*": ["./src/*"]
     },
-    "types": ["node"]
+    "types": ["node"],
+    "esModuleInterop": true
   },
-  "include": ["src"],
+  "include": ["src", "cli"],
   "exclude": ["node_modules"]
 }
